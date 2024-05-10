@@ -2,6 +2,7 @@ import Image from "next/image";
 import background_image from "@/public/background_image.jpeg";
 import linkedin from "@/public/linkedin.png";
 import github from "@/public/github.svg";
+import email from "@/public/email.png";
 import {
   SocialMediaPill,
   SocialMediaPillWrapper,
@@ -27,10 +28,23 @@ export default function Home() {
               link="https://github.com/SeansC12"
             />
             <SocialMediaPill
-              icon={linkedin}
-              link="https://www.linkedin.com/in/sean-chua-142a17265/"
+              icon={email}
+              link="mailto:sean.ulric.chua@gmail.com"
             />
           </SocialMediaPillWrapper>
+          <div className="font-medium">
+            I’m a web developer with a strong interest in
+            React and building scalable and robust backend
+            systems. I am reaching 2 years of experience in
+            web development with React.
+            <br></br>
+            <br></br>I am fascinated by the complex
+            infrastructures of big software companies and
+            how they can be so resilient. I learn by
+            building apps that strive to perform tasks in
+            the simplest and most resilient way possible.
+            Check some of them out below.
+          </div>
         </div>
       </div>
     </div>
