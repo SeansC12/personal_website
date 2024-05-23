@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function SocialMediaPillWrapper({ children }) {
   return (
-    <div className="flex items-center justify-start gap-4">
+    <div className="flex items-center justify-start gap-4 mb-3">
       {children}
     </div>
   );
