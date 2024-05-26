@@ -10,38 +10,13 @@ import {
   SocialMediaPillWrapper,
 } from "@/components/SocialMediaPill";
 
-// Project Icons
-import MentalStopImage from "@/public/project_photos/mentalstop.webp";
+// Project Card
+import ProjectCard from "@/components/ProjectCard";
 
 // Shadcn
 
-const projects = [
-  { name: "Blog", image: "", link: "/projects/blog" },
-  {
-    name: "MentalStop",
-    image: MentalStopImage,
-    link: "/projects/mentalstop",
-    stack: ["Next.js", "MySQL", "Supabase"],
-  },
-  {
-    name: "Face Filter",
-    image: "",
-    link: "/projects/face-filter",
-    stack: ["Vite", "Flask", "OpenCV"],
-  },
-  {
-    name: "Newsquest",
-    image: "",
-    link: "/projects/newsquest",
-    stack: ["Next.js", "MySQL", "Supabase"],
-  },
-  {
-    name: "Driving Game",
-    image: "",
-    link: "/projects/driving-game",
-    stack: ["CRA", "Three.js"],
-  },
-];
+// Projects
+import projects from "@/lib/projects";
 
 export default function Home() {
   return (
@@ -53,10 +28,11 @@ export default function Home() {
       />
       <div className="absolute top-0 left-0">
         <div className="px-64 py-14">
-          {/* <Image /> */}
-          <h1 className="mb-3">
-            Sean Chua. <u>Web Developer.</u>
-          </h1>
+          <div className="w-40 aspect-square bg-pink-500 rounded-full mb-5" />
+          <h1 className="mb-3">Sean Chua</h1>
+          <h4 className="mb-3">
+            <i>Web Developer</i>
+          </h4>
           <SocialMediaPillWrapper>
             <SocialMediaPill
               icon={linkedin}
@@ -89,23 +65,10 @@ export default function Home() {
           <div className="flex flex-wrap gap-12 flex-1">
             {projects.map((project, index) => (
               <div
-                className="flex-1 flex items-center justify-center flex-col gap-4 transition-all"
+                className="flex-1 flex items-center justify-start flex-col gap-4 transition-all"
                 key={index}
               >
-                <div className="flex items-center justify-center flex-col min-w-44 cursor-pointer gap-4 group rounded-xl p-4">
-                  {project.image ? (
-                    <Image
-                      className="w-full aspect-square max-w-40 hover:opacity-80"
-                      src={project.image}
-                    />
-                  ) : (
-                    <div className="rounded-full hover:opacity-80 w-full max-w-40 aspect-square bg-pink-500" />
-                  )}
-                  <div className="font-bold group transition duration-300">
-                    {project.name}
-                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white rounded-full" />
-                  </div>
-                </div>
+                <ProjectCard project={project} />
               </div>
             ))}
           </div>
