@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+
 import background_image from "@/public/background_image.jpeg";
 
 // Social Media Icons
@@ -14,11 +18,27 @@ import {
 import ProjectCard from "@/components/ProjectCard";
 
 // Shadcn
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 // Projects
 import projects from "@/lib/projects";
 
 export default function Home() {
+  const [isProjectOpen, setIsProjectOpen] = useState(false);
+  const [openProjectIndex, setOpenProjectIndex] =
+    useState(0);
+
   return (
     <div className="w-full h-max relative">
       <Image
@@ -67,14 +87,43 @@ export default function Home() {
               <div
                 className="flex-1 flex items-center justify-start flex-col gap-4 transition-all"
                 key={index}
+                onClick={() => {
+                  setIsProjectOpen(true);
+                  setOpenProjectIndex(index);
+                  console.log("opened");
+                }}
               >
                 <ProjectCard project={project} />
               </div>
             ))}
           </div>
         </div>{" "}
+        <ProjectDialog
+          open={isProjectOpen}
+          setOpen={setIsProjectOpen}
+        />
         {/* Div to put all the stuff in */}
       </div>
     </div>
+  );
+}
+
+function ProjectDialog({ open, setOpen }) {
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogContent className="sm:max-w-[425px] dark:bg-black dark:border-[#313131]">
+        <DialogHeader>
+          <h4>Edit profile</h4>
+          <DialogDescription className="text-gray-600">
+            Make changes to your profile here. Click save
+            when you're done.
+          </DialogDescription>
+        </DialogHeader>
+        <div>hi</div>
+        <DialogFooter>
+          <Button type="submit">Save changes</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   );
 }
