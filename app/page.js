@@ -85,11 +85,11 @@ export default function Home() {
         ))}
       </div>
 
-      <ProjectModal
+      {/* <ProjectModal
         open={isProjectOpen}
         setOpen={setIsProjectOpen}
         project={projects[openProjectIndex]}
-      />
+      /> */}
     </div>
     // <K/div>
   );
