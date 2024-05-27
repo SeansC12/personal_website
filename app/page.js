@@ -53,7 +53,7 @@ export default function Home() {
         />
       </SocialMediaPillWrapper>
 
-      <div className="font-medium">
+      <div className="text-lg text-gray-300">
         I’m a web developer with a strong interest in React
         and building scalable and robust backend systems. I
         am reaching 2 years of experience in web development

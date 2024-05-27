@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import projects from "@/lib/projects";
 import Image from "next/image";
@@ -11,6 +13,10 @@ import TechStackPill from "@/components/TechStackPill";
 import github from "@/public/social_media_icons/github.svg";
 import web from "@/public/social_media_icons/web.svg";
 
+// App Image Carousel
+import { AppImageCarousel } from "@/components/AppImageCarousel";
+
+// Get project information function
 function getProjectObject(projects, name) {
   for (const element of projects) {
     if (element.name.toLowerCase() === name) {
@@ -26,7 +32,7 @@ function page({ params }) {
   );
   return (
     <div className="w-full lg:w-[800px]">
-      <div className="flex justify-between">
+      <div className="flex justify-between mb-3">
         <div className="flex items-center justify-center gap-3">
           {project.image && (
             <Image
@@ -71,10 +77,23 @@ function page({ params }) {
           </Button>
         </div>
       </div>
-
-      <h4 className="text-gray-400">
+      <AppImageCarousel images={project.appImages} />
+      <div
+        style={{ whiteSpace: "pre-wrap" }}
+        className="text-lg text-gray-400"
+      >
         {project.longDescription}
-      </h4>
+      </div>
+      <div
+        style={{ whiteSpace: "pre-wrap" }}
+        className="font-mono text-flair"
+      >
+        {"\n"}Tip: More information on the project is on its{" "}
+        <Link href="">
+          <u>Github repo</u>
+        </Link>
+        . Please check it out.
+      </div>
     </div>
   );
 }
