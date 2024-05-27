@@ -2,6 +2,73 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import TechStackPill from "./TechStackPill";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "./ui/button";
+
+// Icons
+import github from "@/public/social_media_icons/github.svg";
+import web from "@/public/social_media_icons/web.svg";
+
+function ProjectCard2({ project }) {
+  return (
+    <Card className="dark:bg-[#1f1f1f] cursor-pointer min-w-64 w-full h-full group flex flex-col">
+      <CardHeader>
+        <div className="text-sm font-mono text-flair">
+          {project.year}
+        </div>
+        <div className="text-lg font-bold text-[] group-hover:underline">
+          {project.name}
+        </div>
+        <CardDescription>
+          {project.description}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="flex flex-wrap items-center justify-start gap-2 -mt-2">
+          {project.stack &&
+            project.stack.map((technology, index) => (
+              <div key={index}>
+                <TechStackPill text={technology} />
+              </div>
+            ))}
+        </div>
+      </CardContent>
+      <CardFooter className="grow flex items-end">
+        <Button
+          variant="outline"
+          className="dark:bg-[#1f1f1f] mr-2"
+        >
+          <Image
+            src={github}
+            width={15}
+            height={15}
+            className="mr-1"
+          />
+          GitHub
+        </Button>
+        <Button
+          variant="outline"
+          className="dark:bg-[#1f1f1f]"
+        >
+          <Image
+            src={web}
+            width={15}
+            height={15}
+            className="mr-1"
+          />
+          Demo
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+}
 
 function ProjectCard({ project }) {
   return (
@@ -32,4 +99,4 @@ function ProjectCard({ project }) {
   );
 }
 
-export default ProjectCard;
+export default ProjectCard2;

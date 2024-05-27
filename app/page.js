@@ -41,8 +41,8 @@ export default function Home() {
     useState(0);
 
   return (
-    <div className="w-full">
-      <div className="px-80 py-14">
+    <div className="w-full px-4 sm:px-8 lg:px-0 py-14 flex justify-center">
+      <div className="max-w-[800px]">
         <div className="w-40 aspect-square bg-pink-500 rounded-full mb-5" />
         <h1 className="mb-3">Hey, I'm Sean</h1>
         <h4 className="mb-3">
@@ -77,10 +77,13 @@ export default function Home() {
           out below.
         </div>
 
-        <div className="flex flex-wrap gap-12 flex-1">
+        <div className="mt-12 text-3xl font-bold mb-6">
+          Projects
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 min-[860px]:grid-cols-3 gap-4">
           {projects.map((project, index) => (
             <div
-              className="flex-1 flex items-center justify-start flex-col gap-4 transition-all"
+              className="flex-1"
               key={index}
               onClick={() => {
                 setIsProjectOpen(true);
