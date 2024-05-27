@@ -1,10 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Linkedin } from "lucide-react";
+
+export function ButtonOutline() {
+  return <Button variant="outline">Outline</Button>;
+}
 
 function SocialMediaPillWrapper({ children }) {
   return (
-    <div className="flex items-center justify-start gap-4 mb-3">
+    <div className="flex items-center justify-start gap-2 mb-3">
       {children}
     </div>
   );
@@ -12,11 +18,10 @@ function SocialMediaPillWrapper({ children }) {
 
 function SocialMediaPill({ icon, link }) {
   return (
-    <Link
-      href={link}
-      className="bg-gray-700 p-[0.325rem] rounded-md hover:opacity-90"
-    >
-      <Image src={icon} width={25} height={25} />
+    <Link href={link}>
+      <Button variant="outline" className="p-2">
+        <Image src={icon} width={25} height={25} />
+      </Button>
     </Link>
   );
 }
