@@ -12,9 +12,13 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="dark bg-[#181818] text-white"
+      className="dark bg-site-gray text-white"
     >
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="w-full px-4 sm:px-8 lg:px-0 py-14 flex justify-center">
+          <div className="max-w-[800px]">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }

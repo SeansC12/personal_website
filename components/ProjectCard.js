@@ -18,7 +18,7 @@ import web from "@/public/social_media_icons/web.svg";
 
 function ProjectCard2({ project }) {
   return (
-    <Card className="dark:bg-[#1f1f1f] cursor-pointer min-w-64 w-full h-full group flex flex-col">
+    <Card className="dark:bg-card-gray cursor-pointer min-w-64 w-full h-full group flex flex-col">
       <CardHeader>
         <div className="text-sm font-mono text-flair">
           {project.year}
@@ -43,7 +43,7 @@ function ProjectCard2({ project }) {
       <CardFooter className="grow flex items-end">
         <Button
           variant="outline"
-          className="dark:bg-[#1f1f1f] mr-2"
+          className="dark:bg-site-gray mr-2"
         >
           <Image
             src={github}
@@ -55,7 +55,7 @@ function ProjectCard2({ project }) {
         </Button>
         <Button
           variant="outline"
-          className="dark:bg-[#1f1f1f]"
+          className="dark:bg-site-gray"
         >
           <Image
             src={web}

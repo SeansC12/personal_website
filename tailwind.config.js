@@ -19,6 +19,8 @@ module.exports = {
     extend: {
       colors: {
         flair: "#5dddac",
+        "card-gray": "#1f1f1f",
+        "site-gray": "#181818",
       },
       keyframes: {
         "accordion-down": {
