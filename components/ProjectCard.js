@@ -19,7 +19,7 @@ import web from "@/public/social_media_icons/web.svg";
 function ProjectCard2({ project }) {
   return (
     <Link href={project.link}>
-      <Card className="dark:bg-card-gray cursor-pointer min-w-64 w-full h-full group flex flex-col">
+      <Card className="dark:bg-card-gray dark:border-white/10 cursor-pointer min-w-64 w-full h-full group flex flex-col">
         <CardHeader>
           <div className="text-sm font-mono text-flair">
             {project.year}

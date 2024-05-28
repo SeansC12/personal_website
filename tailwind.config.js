@@ -21,6 +21,7 @@ module.exports = {
         flair: "#5dddac",
         "card-gray": "#1f1f1f",
         "site-gray": "#181818",
+        "desc-gray": "#9ca3af",
       },
       keyframes: {
         "accordion-down": {

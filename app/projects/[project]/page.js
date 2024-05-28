@@ -80,7 +80,7 @@ function page({ params }) {
       <AppImageCarousel images={project.appImages} />
       <div
         style={{ whiteSpace: "pre-wrap" }}
-        className="text-lg text-gray-400"
+        className="text-lg text-desc-gray"
       >
         {project.longDescription}
       </div>

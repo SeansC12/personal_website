@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import background_image from "@/public/background_image.jpeg";
-
 // Social Media Icons
 import linkedin from "@/public/social_media_icons/linkedin.svg";
 import github from "@/public/social_media_icons/github.svg";
@@ -21,10 +19,12 @@ import ProjectCard from "@/components/ProjectCard";
 // Project Modal
 import ProjectModal from "@/components/ProjectModal";
 
-// Shadcn
-
 // Projects
 import projects from "@/lib/projects";
+
+// Course Completions
+import courseCompletions from "@/lib/CourseCompletions";
+import CourseCard from "@/components/CourseCard";
 
 export default function Home() {
   const [isProjectOpen, setIsProjectOpen] = useState(false);
@@ -81,6 +81,17 @@ export default function Home() {
             }}
           >
             <ProjectCard project={project} />
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-12 text-3xl font-bold mb-6">
+        Course Completions
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {courseCompletions.map((course, index) => (
+          <div key={index}>
+            <CourseCard course={course} />
           </div>
         ))}
       </div>
