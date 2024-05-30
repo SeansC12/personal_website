@@ -33,11 +33,11 @@ export default function Home() {
 
   return (
     <div>
-      <div className="w-40 aspect-square bg-pink-500 rounded-full mb-5" />
+      <div
+        id="home"
+        className="w-40 aspect-square bg-pink-500 rounded-full mb-5"
+      />
       <h1 className="mb-3">Hey, I'm Sean</h1>
-      <h4 className="mb-3">
-        <i>Web Developer</i>
-      </h4>
       <SocialMediaPillWrapper>
         <SocialMediaPill
           icon={linkedin}
@@ -67,7 +67,10 @@ export default function Home() {
         below.
       </div>
 
-      <div className="mt-12 text-3xl font-bold mb-6">
+      <div
+        id="projects"
+        className="mt-12 text-3xl font-bold mb-6"
+      >
         Projects
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 min-[860px]:grid-cols-3 gap-4">
@@ -85,7 +88,10 @@ export default function Home() {
         ))}
       </div>
 
-      <div className="mt-12 text-3xl font-bold mb-6">
+      <div
+        id="course"
+        className="mt-12 text-3xl font-bold mb-6"
+      >
         Course Completions
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
