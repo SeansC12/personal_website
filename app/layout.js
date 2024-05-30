@@ -1,4 +1,8 @@
 import { Inter } from "next/font/google";
+import { Button } from "@/components/ui/button";
+import { Home } from "lucide-react";
+import { Code } from "lucide-react";
+import { BookMarked } from "lucide-react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,7 +19,40 @@ export default function RootLayout({ children }) {
       className="dark bg-site-gray text-white"
     >
       <body className={inter.className}>
-        <div className="w-full px-4 sm:px-8 lg:px-0 py-14 flex justify-center">
+        <div className="w-full px-4 sm:px-8 lg:px-0 py-14 flex flex-col items-center">
+          <div className="flex flex-1 items-start max-w-[800px] w-full gap-2 mb-20">
+            <Button
+              className="dark:bg-site-gray dark:border-white/10"
+              variant="outline"
+            >
+              <Home className="mr-2 h-4 w-4" />
+              Home
+            </Button>
+
+            <Button
+              className="dark:bg-site-gray dark:border-white/10"
+              variant="outline"
+            >
+              <Code className="mr-2 h-4 w-4" />
+              Projects
+            </Button>
+
+            <Button
+              className="dark:bg-site-gray dark:border-white/10"
+              variant="outline"
+            >
+              <BookMarked className="mr-2 h-5 w-5 text-white" />
+              Course Completions
+            </Button>
+
+            <Button
+              className="dark:bg-site-gray dark:border-white/10"
+              variant="outline"
+            >
+              <Home className="mr-2 h-4 w-4" />
+              Home
+            </Button>
+          </div>
           <div className="max-w-[800px]">{children}</div>
         </div>
       </body>
