@@ -117,11 +117,11 @@ export default function Home() {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <li className="list-disc ml-3 marker:text-neutral-500 text-lg text-blue-500">
-            <div className="w-max hover:bg-blue-500 hover:text-black">
+          <li className="list-disc ml-3 marker:text-neutral-500 text-lg text-[#98a0fa]">
+            <div className="w-max hover:bg-[#98a0fa] hover:text-black">
               Resume
               <ExternalLink className="ml-2 h-4 w-4 inline mb-1" />
-              <div className="h-[2px] bg-blue-500 -mt-1" />
+              <div className="h-[2px] bg-[#98a0fa] -mt-1" />
             </div>
           </li>
         </Link>
