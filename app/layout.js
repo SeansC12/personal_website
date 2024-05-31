@@ -1,7 +1,12 @@
 import { Inter } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Home, Code, BookMarked } from "lucide-react";
+import {
+  Home,
+  Code,
+  BookMarked,
+  Ellipsis,
+} from "lucide-react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -50,13 +55,13 @@ export default function RootLayout({ children }) {
               </Button>
             </Link>
 
-            <Link href="/#home">
+            <Link href="/#more">
               <Button
                 className="dark:bg-site-gray dark:border-white/10"
                 variant="outline"
               >
-                <Home className="mr-2 h-4 w-4" />
-                Home
+                <Ellipsis className="mr-2 h-4 w-4" />
+                More
               </Button>
             </Link>
           </div>

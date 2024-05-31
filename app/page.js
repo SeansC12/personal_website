@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 // Social Media Icons
 import linkedin from "@/public/social_media_icons/linkedin.svg";
@@ -25,6 +25,9 @@ import projects from "@/lib/projects";
 // Course Completions
 import courseCompletions from "@/lib/CourseCompletions";
 import CourseCard from "@/components/CourseCard";
+
+// Lucide-icons
+import { ExternalLink } from "lucide-react";
 
 export default function Home() {
   const [isProjectOpen, setIsProjectOpen] = useState(false);
@@ -101,6 +104,28 @@ export default function Home() {
           </div>
         ))}
       </div>
+
+      <div
+        id="more"
+        className="mt-12 text-3xl font-bold mb-6"
+      >
+        More
+      </div>
+      <ul>
+        <Link
+          href="https://docs.google.com/document/d/1GWuqDQz1kK_u7hb2Cu3F-1BYwtJO8n2HUiQFZQbqFTQ/edit?usp=sharing"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <li className="list-disc ml-3 marker:text-neutral-500 text-lg text-blue-500">
+            <div className="w-max hover:bg-blue-500 hover:text-black">
+              Resume
+              <ExternalLink className="ml-2 h-4 w-4 inline mb-1" />
+              <div className="h-[2px] bg-blue-500 -mt-1" />
+            </div>
+          </li>
+        </Link>
+      </ul>
 
       {/* <ProjectModal
         open={isProjectOpen}
