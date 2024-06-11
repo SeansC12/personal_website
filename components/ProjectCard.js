@@ -24,7 +24,7 @@ function ProjectCard2({ project }) {
           <div className="text-sm font-mono text-flair">
             {project.year}
           </div>
-          <div className="text-lg font-bold text-[] group-hover:underline">
+          <div className="text-lg font-bold group-hover:underline">
             {project.name}
           </div>
           <CardDescription>
@@ -56,7 +56,7 @@ function ProjectCard2({ project }) {
           </Button>
           <Button
             variant="outline"
-            className="dark:bg-site-gray dark:border-blue-500"
+            className="dark:bg-site-gray dark:border-blue-500 dark:hover:bg-blue-500"
           >
             <Image
               src={web}

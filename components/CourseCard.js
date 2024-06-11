@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function CourseCard({ course }) {
   return (
     <Link href={course.link}>
-      <Card className="dark:bg-card-gray dark:borer-white/10 cursor-pointer min-w-64 w-full h-full group grid grid-cols-[15%_85%] px-5">
+      <Card className="dark:bg-card-gray dark:border-white/10 cursor-pointer min-w-64 w-full h-full group grid grid-cols-[15%_85%] px-5">
         <div className="flex items-center justify-center">
           <Image
             src={course.instituteImage}
@@ -17,8 +17,8 @@ export default function CourseCard({ course }) {
         </div>
         <div>
           <CardHeader className="h-full">
-            <div className="flex items-start justify-center flex-col h-full">
-              <div className="text-sm font-mono text-desc-gray">
+            <div className="flex items-start justify-center flex-col h-full gap-1">
+              <div className="text-sm font-mono text-flair">
                 {course.date}
               </div>
               <div className="font-[500] group-hover:underline">

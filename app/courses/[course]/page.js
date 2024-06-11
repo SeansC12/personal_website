@@ -6,15 +6,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import courseCompletions from "@/lib/CourseCompletions.js";
 
-// Pill
-import TechStackPill from "@/components/TechStackPill";
-
-// Icons
-import github from "@/public/social_media_icons/github.svg";
-import web from "@/public/social_media_icons/web.svg";
-
-// App Image Carousel
-import { AppImageCarousel } from "@/components/AppImageCarousel";
+// Shadcn
+import { Card, CardHeader } from "@/components/ui/card";
 
 // Get project information function
 function getProjectObject(courses, name) {
@@ -41,6 +34,18 @@ function page({ params }) {
         src={course.imageOfCert}
         className="rounded-xl"
       />
+      <Card className="dark:bg-site-gray dark:border-white/10 w-full text-center mt-5">
+        <CardHeader>
+          <div className="flex items-center justify-center">
+            <div className="w-max hover:bg-[#98a0fa] text-[#98a0fa] hover:text-black">
+              <Link href={course.cert_link}>
+                {course.cert_link}
+              </Link>
+              <div className="h-[2px] bg-[#98a0fa] -mt-1" />
+            </div>
+          </div>
+        </CardHeader>
+      </Card>
       <div
         style={{ whiteSpace: "pre-wrap" }}
         className="text-lg text-desc-gray mt-5"
