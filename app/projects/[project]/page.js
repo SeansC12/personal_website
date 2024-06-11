@@ -51,30 +51,42 @@ function page({ params }) {
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <Button
-            variant="outline"
-            className="dark:bg-blue-600 dark:text-white dark:hover:bg-blue-500 text-lg h-max mr-3"
+          <Link
+            href={project.project_link}
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <Image
-              src={web}
-              width={30}
-              height={30}
-              className="mr-1"
-            />
-            Open
-          </Button>
-          <Button
-            variant="outline"
-            className="dark:bg-site-gray text-lg h-max"
+            <Button
+              variant="outline"
+              className="dark:bg-blue-600 dark:text-white dark:hover:bg-blue-500 text-lg h-max mr-3"
+            >
+              <Image
+                src={web}
+                width={25}
+                height={25}
+                className="mr-2"
+              />
+              Open
+            </Button>
+          </Link>
+          <Link
+            href={project.github_link}
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <Image
-              src={github}
-              width={30}
-              height={30}
-              className="mr-1"
-            />
-            GitHub
-          </Button>
+            <Button
+              variant="outline"
+              className="dark:bg-site-gray text-lg h-max"
+            >
+              <Image
+                src={github}
+                width={25}
+                height={25}
+                className="mr-2"
+              />
+              GitHub
+            </Button>
+          </Link>
         </div>
       </div>
       <AppImageCarousel images={project.appImages} />

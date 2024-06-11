@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import TechStackPill from "./TechStackPill";
 import {
@@ -16,7 +17,8 @@ import { Button } from "./ui/button";
 import github from "@/public/social_media_icons/github.svg";
 import web from "@/public/social_media_icons/web.svg";
 
-function ProjectCard2({ project }) {
+function ProjectCard({ project }) {
+  const router = useRouter();
   return (
     <Link href={project.link}>
       <Card className="dark:bg-card-gray dark:border-white/10 cursor-pointer min-w-64 w-full h-full group flex flex-col">
@@ -44,6 +46,9 @@ function ProjectCard2({ project }) {
         <CardFooter className="grow flex items-end">
           <Button
             variant="outline"
+            onClick={() =>
+              router.push(project.project_link)
+            }
             className="dark:bg-site-gray mr-2"
           >
             <Image
@@ -72,7 +77,7 @@ function ProjectCard2({ project }) {
   );
 }
 
-function ProjectCard({ project }) {
+function ProjectCard2({ project }) {
   return (
     <div className="flex-1 flex items-center justify-start flex-col gap-4 transition-all">
       <div className="flex items-center justify-center flex-col min-w-44 w-full h-full cursor-pointer gap-4 group rounded-xl p-4">
@@ -101,4 +106,4 @@ function ProjectCard({ project }) {
   );
 }
 
-export default ProjectCard2;
+export default ProjectCard;
