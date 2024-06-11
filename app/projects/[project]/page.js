@@ -19,7 +19,7 @@ import { AppImageCarousel } from "@/components/AppImageCarousel";
 // Get project information function
 function getProjectObject(projects, name) {
   for (const element of projects) {
-    if (element.name.toLowerCase() === name) {
+    if (element.url_shortened.toLowerCase() === name) {
       return element;
     }
   }
