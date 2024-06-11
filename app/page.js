@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Social Media Icons
 import linkedin from "@/public/social_media_icons/linkedin.svg";
@@ -12,6 +13,9 @@ import {
   SocialMediaPill,
   SocialMediaPillWrapper,
 } from "@/components/SocialMediaPill";
+
+// Selfie
+import me from "@/public/Selfie/Me.jpg";
 
 // Project Card
 import ProjectCard from "@/components/ProjectCard";
@@ -36,9 +40,10 @@ export default function Home() {
 
   return (
     <div>
-      <div
+      <Image
+        src={me}
         id="home"
-        className="w-40 aspect-square bg-pink-500 rounded-full mb-5"
+        className="w-40 aspect-square rounded-full mb-5"
       />
       <h1 className="mb-3">Hey, I'm Sean</h1>
       <SocialMediaPillWrapper>
