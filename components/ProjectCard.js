@@ -44,30 +44,38 @@ function ProjectCard({ project }) {
           </div>
         </CardContent>
         <CardFooter className="grow flex items-end">
-          <Button
-            variant="outline"
-            className="dark:bg-site-gray mr-2"
-          >
-            <Image
-              src={github}
-              width={15}
-              height={15}
-              className="mr-1"
-            />
-            GitHub
-          </Button>
-          <Button
-            variant="outline"
-            className="dark:bg-site-gray dark:border-blue-500 dark:hover:bg-blue-500"
-          >
-            <Image
-              src={web}
-              width={15}
-              height={15}
-              className="mr-1"
-            />
-            Demo
-          </Button>
+          <object>
+            <Link href={project.github_link}>
+              <Button
+                variant="outline"
+                className="dark:bg-site-gray mr-2"
+              >
+                <Image
+                  src={github}
+                  width={15}
+                  height={15}
+                  className="mr-1"
+                />
+                GitHub
+              </Button>
+            </Link>
+          </object>
+          <object>
+            <Link href={project.project_link}>
+              <Button
+                variant="outline"
+                className="dark:bg-site-gray dark:border-blue-500 dark:hover:bg-blue-500"
+              >
+                <Image
+                  src={web}
+                  width={15}
+                  height={15}
+                  className="mr-1"
+                />
+                Demo
+              </Button>
+            </Link>
+          </object>
         </CardFooter>
       </Card>
     </Link>
