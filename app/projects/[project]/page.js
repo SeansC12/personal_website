@@ -101,7 +101,11 @@ function page({ params }) {
         className="font-mono text-flair"
       >
         {"\n"}Tip: More information on the project is on its{" "}
-        <Link href="">
+        <Link
+          href={project.github_link}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <u>Github repo</u>
         </Link>
         . Please check it out.

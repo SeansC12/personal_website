@@ -46,9 +46,6 @@ function ProjectCard({ project }) {
         <CardFooter className="grow flex items-end">
           <Button
             variant="outline"
-            onClick={() =>
-              router.push(project.project_link)
-            }
             className="dark:bg-site-gray mr-2"
           >
             <Image
