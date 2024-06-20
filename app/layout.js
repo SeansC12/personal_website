@@ -5,7 +5,7 @@ import {
   Home,
   Code,
   BookMarked,
-  Ellipsis,
+  ScrollText,
 } from "lucide-react";
 import "./globals.css";
 
@@ -60,8 +60,8 @@ export default function RootLayout({ children }) {
                 className="dark:bg-site-gray dark:border-white/10"
                 variant="outline"
               >
-                <Ellipsis className="mr-2 h-4 w-4" />
-                More
+                <ScrollText className="mr-2 h-5 w-5" />
+                Resume
               </Button>
             </Link>
           </div>

@@ -16,6 +16,9 @@ import web from "@/public/social_media_icons/web.svg";
 // App Image Carousel
 import { AppImageCarousel } from "@/components/AppImageCarousel";
 
+// Shadcn
+import { Card, CardHeader } from "@/components/ui/card";
+
 // Get project information function
 function getProjectObject(projects, name) {
   for (const element of projects) {
@@ -90,6 +93,25 @@ function page({ params }) {
         </div>
       </div>
       <AppImageCarousel images={project.appImages} />
+      {project.name === "MentalStop" ? (
+        <Card className="dark:bg-site-gray dark:border-[#FFD700] w-full text-center mt-5">
+          <CardHeader>
+            <div className="flex items-center justify-center">
+              <div>
+                Featured on CNA:{" "}
+                <div className="w-max hover:bg-[#FFD700] text-[#FFD700] hover:text-black">
+                  <Link href={project.awardLink}>
+                    {project.awardLink}
+                  </Link>
+                  <div className="h-[2px] bg-[#FFD700] -mt-1" />
+                </div>
+              </div>
+            </div>
+          </CardHeader>
+        </Card>
+      ) : (
+        <></>
+      )}
       <div
         style={{ whiteSpace: "pre-wrap" }}
         className="text-lg text-desc-gray"

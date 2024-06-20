@@ -14,8 +14,9 @@ import {
   SocialMediaPillWrapper,
 } from "@/components/SocialMediaPill";
 
-// Selfie
+// Pictures of me
 import me from "@/public/Selfie/Me.jpg";
+import bmw from "@/public/Drawing_of_BMW/F80.png";
 
 // Project Card
 import ProjectCard from "@/components/ProjectCard";
@@ -40,39 +41,43 @@ export default function Home() {
 
   return (
     <div>
-      <Image
-        src={me}
-        id="home"
-        className="w-40 aspect-square rounded-full mb-5"
-      />
-      <h1 className="mb-3">Hey, I'm Sean</h1>
-      <SocialMediaPillWrapper>
-        <SocialMediaPill
-          icon={linkedin}
-          link="https://www.linkedin.com/in/sean-chua-142a17265/"
+      <div className="w-full flex items-start md:items-center justify-between flex-col md:flex-row-reverse gap-5 md:gap-10">
+        <Image
+          src={me}
+          id="home"
+          className="w-40 aspect-square rounded-full"
         />
-        <SocialMediaPill
-          icon={github}
-          link="https://github.com/SeansC12"
-        />
-        <SocialMediaPill
-          icon={email}
-          link="mailto:sean.ulric.chua@gmail.com"
-        />
-      </SocialMediaPillWrapper>
+        {/* <Image src={bmw} className="w-52" /> */}
+        <div>
+          <h1 className="mb-3">Hey, I'm Sean</h1>
+          <SocialMediaPillWrapper>
+            <SocialMediaPill
+              icon={linkedin}
+              link="https://www.linkedin.com/in/sean-chua-142a17265/"
+            />
+            <SocialMediaPill
+              icon={github}
+              link="https://github.com/SeansC12"
+            />
+            <SocialMediaPill
+              icon={email}
+              link="mailto:sean.ulric.chua@gmail.com"
+            />
+          </SocialMediaPillWrapper>
 
-      <div className="text-lg text-[#DDDDDD]">
-        I’m a web developer with a strong interest in React
-        and building scalable and robust backend systems. I
-        am reaching 2 years of experience in web development
-        with React.
-        <br></br>
-        <br></br>I am fascinated by the complex
-        infrastructures of big software companies and how
-        they can be so resilient. I learn by building apps
-        that strive to perform tasks in the simplest and
-        most resilient way possible. Check some of them out
-        below.
+          <div className="text-lg text-[#DDDDDD]">
+            I’m a web developer with a strong interest in
+            React
+            <br /> and building scalable and robust backend
+            systems.
+            {/* <br></br>
+            <br></br>I am fascinated by the complex
+            infrastructures of big software companies and
+            how they can be so resilient. I learn by
+            building apps that strive to perform tasks in
+            the simplest and most resilient way possible. */}
+          </div>
+        </div>
       </div>
 
       <div
@@ -110,27 +115,27 @@ export default function Home() {
         ))}
       </div>
 
-      <div
+      {/* <div
         id="more"
         className="mt-12 text-3xl font-bold mb-6"
       >
-        More
-      </div>
-      <ul>
-        <Link
-          href="https://docs.google.com/document/d/1GWuqDQz1kK_u7hb2Cu3F-1BYwtJO8n2HUiQFZQbqFTQ/edit?usp=sharing"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <li className="list-disc ml-3 marker:text-neutral-500 text-lg text-[#98a0fa]">
-            <div className="w-max hover:bg-[#98a0fa] hover:text-black">
-              Resume
-              <ExternalLink className="ml-2 h-4 w-4 inline mb-1" />
-              <div className="h-[2px] bg-[#98a0fa] -mt-1" />
-            </div>
-          </li>
-        </Link>
-      </ul>
+        Resume
+      </div> */}
+      <Link
+        id="more"
+        href="https://docs.google.com/document/d/1GWuqDQz1kK_u7hb2Cu3F-1BYwtJO8n2HUiQFZQbqFTQ/edit?usp=sharing"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div className="w-max hover:bg-[#98a0fa] hover:text-black mt-12 text-3xl font-bold text-[#98a0fa] mb-6">
+          Resume
+          <ExternalLink className="ml-2 h-5 w-5 inline mb-1" />
+        </div>
+      </Link>
+      <iframe
+        className="w-full h-[800px]"
+        src="https://docs.google.com/document/d/e/2PACX-1vQwRs11myfUDPg_lllHUkShFw7e56I95tnaZgn1omTGdd7uH1V1ZcqJwIbsOwd7u5VvHX_21VXTeMMc/pub?embedded=true"
+      />
 
       {/* <ProjectModal
         open={isProjectOpen}
@@ -138,6 +143,5 @@ export default function Home() {
         project={projects[openProjectIndex]}
       /> */}
     </div>
-    // <K/div>
   );
 }

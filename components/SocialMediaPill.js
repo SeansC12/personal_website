@@ -19,7 +19,10 @@ function SocialMediaPillWrapper({ children }) {
 function SocialMediaPill({ icon, link }) {
   return (
     <Link href={link}>
-      <Button variant="outline" className="p-2">
+      <Button
+        variant="outline"
+        className="p-2 dark:bg-site-gray"
+      >
         <Image src={icon} width={25} height={25} />
       </Button>
     </Link>
