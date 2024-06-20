@@ -6,6 +6,7 @@ import {
   Code,
   BookMarked,
   ScrollText,
+  User,
 } from "lucide-react";
 import "./globals.css";
 
@@ -51,7 +52,7 @@ export default function RootLayout({ children }) {
                 variant="outline"
               >
                 <BookMarked className="mr-2 h-5 w-5 text-white" />
-                Course Completions
+                Courses
               </Button>
             </Link>
 
@@ -62,6 +63,15 @@ export default function RootLayout({ children }) {
               >
                 <ScrollText className="mr-2 h-5 w-5" />
                 Resume
+              </Button>
+            </Link>
+            <Link href="/me">
+              <Button
+                className="dark:bg-site-gray dark:border-white/10"
+                variant="outline"
+              >
+                <User className="mr-2 h-5 w-5" />
+                About Me
               </Button>
             </Link>
           </div>

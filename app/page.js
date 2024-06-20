@@ -32,7 +32,9 @@ import courseCompletions from "@/lib/CourseCompletions";
 import CourseCard from "@/components/CourseCard";
 
 // Lucide-icons
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ChevronRight } from "lucide-react";
+
+import GlowingButton from "@/components/GlowingButton";
 
 export default function Home() {
   const [isProjectOpen, setIsProjectOpen] = useState(false);
@@ -65,7 +67,7 @@ export default function Home() {
             />
           </SocialMediaPillWrapper>
 
-          <div className="text-lg text-[#DDDDDD]">
+          <div className="text-lg text-[#DDDDDD] mb-5">
             I’m a web developer with a strong interest in
             React
             <br /> and building scalable and robust backend
@@ -78,6 +80,13 @@ export default function Home() {
             building apps that strive to perform tasks in
             the simplest and most resilient way possible. */}
           </div>
+          <GlowingButton>
+            Learn more about who I am
+            <ChevronRight
+              className="h-6 w-6"
+              // strokeWidth={3}
+            />
+          </GlowingButton>
         </div>
       </div>
 
