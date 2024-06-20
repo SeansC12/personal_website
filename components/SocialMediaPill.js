@@ -10,7 +10,7 @@ export function ButtonOutline() {
 
 function SocialMediaPillWrapper({ children }) {
   return (
-    <div className="flex items-center justify-start gap-2 mb-3">
+    <div className="flex items-center justify-start gap-2 mb-5">
       {children}
     </div>
   );

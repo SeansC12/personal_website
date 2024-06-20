@@ -45,11 +45,11 @@ export default function Home() {
         <Image
           src={me}
           id="home"
-          className="w-40 aspect-square rounded-full"
+          className="w-48 aspect-square rounded-full"
         />
         {/* <Image src={bmw} className="w-52" /> */}
         <div>
-          <h1 className="mb-3">Hey, I'm Sean</h1>
+          <h1 className="mb-5">Hey, I'm Sean</h1>
           <SocialMediaPillWrapper>
             <SocialMediaPill
               icon={linkedin}
@@ -70,6 +70,7 @@ export default function Home() {
             React
             <br /> and building scalable and robust backend
             systems.
+            <br /> Welcome to my tech grove. 💻
             {/* <br></br>
             <br></br>I am fascinated by the complex
             infrastructures of big software companies and
@@ -127,7 +128,7 @@ export default function Home() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <div className="w-max hover:bg-[#98a0fa] hover:text-black mt-12 text-3xl font-bold text-[#98a0fa] mb-6">
+        <div className="w-max hover:bg-[#98a0fa] hover:text-black mt-12 text-3xl font-bold text-[#98a0fa] mb-6 cursor-pointer">
           Resume
           <ExternalLink className="ml-2 h-5 w-5 inline mb-1" />
         </div>
