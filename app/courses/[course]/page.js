@@ -37,11 +37,11 @@ function page({ params }) {
       <Card className="dark:bg-site-gray dark:border-white/10 w-full text-center mt-5">
         <CardHeader>
           <div className="flex items-center justify-center">
-            <div className="w-max hover:bg-[#98a0fa] text-[#98a0fa] hover:text-black">
+            <div className="w-max hover:bg-link-purple text-link-purple hover:text-black">
               <Link href={course.cert_link}>
                 {course.cert_link}
               </Link>
-              <div className="h-[2px] bg-[#98a0fa] -mt-1" />
+              <div className="h-[2px] bg-link-purple -mt-1" />
             </div>
           </div>
         </CardHeader>

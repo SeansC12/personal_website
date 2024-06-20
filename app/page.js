@@ -16,7 +16,6 @@ import {
 
 // Pictures of me
 import me from "@/public/Selfie/Me.jpg";
-import bmw from "@/public/Drawing_of_BMW/F80.png";
 
 // Project Card
 import ProjectCard from "@/components/ProjectCard";
@@ -137,7 +136,7 @@ export default function Home() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <div className="w-max hover:bg-[#98a0fa] hover:text-black mt-12 text-3xl font-bold text-[#98a0fa] mb-6 cursor-pointer">
+        <div className="w-max hover:bg-link-purple hover:text-black mt-12 text-3xl font-bold text-link-purple mb-6 cursor-pointer">
           Resume
           <ExternalLink className="ml-2 h-5 w-5 inline mb-1" />
         </div>

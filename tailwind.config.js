@@ -22,6 +22,7 @@ module.exports = {
         "card-gray": "#1f1f1f",
         "site-gray": "#181818",
         "desc-gray": "#9ca3af",
+        "link-purple": "#98a0fa",
       },
       keyframes: {
         "accordion-down": {
