@@ -42,15 +42,17 @@ export default function Home() {
 
   return (
     <div>
-      <div className="w-full flex items-start md:items-center justify-between flex-col md:flex-row-reverse gap-5 md:gap-10">
+      <div className="w-full flex items-start md:items-center justify-between flex-col md:flex-row-reverse gap-5 md:gap-36">
         <Image
           src={me}
           id="home"
-          className="w-48 aspect-square rounded-full"
+          className="w-32 min-w-32 md:w-48 md:min-w-48 aspect-square rounded-full"
         />
         {/* <Image src={bmw} className="w-52" /> */}
         <div>
-          <h1 className="mb-5">Hey, I'm Sean</h1>
+          <h1 className="mb-5 text-4xl md:text-5xl">
+            Hey, I'm Sean
+          </h1>
           <SocialMediaPillWrapper>
             <SocialMediaPill
               icon={linkedin}
@@ -68,10 +70,8 @@ export default function Home() {
 
           <div className="text-lg text-[#DDDDDD] mb-5">
             I’m a web developer with a strong interest in
-            React
-            <br /> and building scalable and robust backend
-            systems.
-            <br /> Welcome to my tech grove. 💻
+            React and building scalable and robust backend
+            systems. Welcome to my tech grove. 💻
             {/* <br></br>
             <br></br>I am fascinated by the complex
             infrastructures of big software companies and
