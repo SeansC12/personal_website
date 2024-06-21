@@ -79,13 +79,15 @@ export default function Home() {
             building apps that strive to perform tasks in
             the simplest and most resilient way possible. */}
           </div>
-          <GlowingButton>
-            Learn more about who I am
-            <ChevronRight
-              className="h-6 w-6"
-              // strokeWidth={3}
-            />
-          </GlowingButton>
+          <Link href="/me">
+            <GlowingButton>
+              Learn more about who I am
+              <ChevronRight
+                className="h-6 w-6"
+                // strokeWidth={3}
+              />
+            </GlowingButton>
+          </Link>
         </div>
       </div>
 
@@ -136,7 +138,7 @@ export default function Home() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <div className="w-max hover:bg-link-purple hover:text-black mt-12 text-3xl font-bold text-link-purple mb-6 cursor-pointer">
+        <div className="w-max link mt-12 text-3xl font-bold  mb-6 cursor-pointer">
           Resume
           <ExternalLink className="ml-2 h-5 w-5 inline mb-1" />
         </div>
