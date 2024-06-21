@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
       className="dark bg-site-gray text-white scroll-smooth"
     >
       <body className={inter.className}>
-        <div className="w-full px-4 sm:px-8 lg:px-0 py-14 flex flex-col items-center">
-          <div className="flex flex-1 items-start max-w-[800px] w-full gap-2 mb-20">
+        <div className="w-full px-4 sm:px-8 lg:px-0 py-2 md:py-14 flex flex-col items-center">
+          <div className="flex flex-1 items-start max-w-[800px] w-full gap-1 md:gap-2 mb-20 flex-wrap">
             <Link href="/#home">
               <Button
-                className="dark:bg-site-gray dark:border-white/10"
+                className="px-1 py-1 md:py-4 md:px-4 dark:bg-site-gray dark:border-white/10"
                 variant="outline"
               >
                 <Home className="mr-2 h-4 w-4" />
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
 
             <Link href="/#projects">
               <Button
-                className="dark:bg-site-gray dark:border-white/10"
+                className="px-1 py-1 md:py-4 md:px-4 dark:bg-site-gray dark:border-white/10"
                 variant="outline"
               >
                 <Code className="mr-2 h-4 w-4" />
@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
 
             <Link href="/#course">
               <Button
-                className="dark:bg-site-gray dark:border-white/10"
+                className="px-1 py-1 md:py-4 md:px-4 dark:bg-site-gray dark:border-white/10"
                 variant="outline"
               >
                 <BookMarked className="mr-2 h-5 w-5 text-white" />
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
 
             <Link href="/#more">
               <Button
-                className="dark:bg-site-gray dark:border-white/10"
+                className="px-1 py-1 md:py-4 md:px-4 dark:bg-site-gray dark:border-white/10"
                 variant="outline"
               >
                 <ScrollText className="mr-2 h-5 w-5" />
@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
             </Link>
             <Link href="/me">
               <Button
-                className="dark:bg-site-gray dark:border-white/10"
+                className="px-1 py-1 md:py-4 md:px-4 dark:bg-site-gray dark:border-white/10"
                 variant="outline"
               >
                 <User className="mr-2 h-5 w-5" />

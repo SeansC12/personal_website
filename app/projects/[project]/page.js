@@ -94,21 +94,12 @@ function page({ params }) {
       </div>
       <AppImageCarousel images={project.appImages} />
       {project.name === "MentalStop" ? (
-        <Card className="dark:bg-site-gray dark:border-[#FFD700] w-full text-center mt-5">
-          <CardHeader>
-            <div className="flex items-center justify-center">
-              <div>
-                Featured on CNA:{" "}
-                <div className="w-max hover:bg-[#FFD700] text-[#FFD700] hover:text-black">
-                  <Link href={project.awardLink}>
-                    {project.awardLink}
-                  </Link>
-                  <div className="h-[2px] bg-[#FFD700] -mt-1" />
-                </div>
-              </div>
-            </div>
-          </CardHeader>
-        </Card>
+        <CustomGlowingButton>
+          As seen on CNA:
+          <Link className="link" href={project.awardLink}>
+            {project.awardLink}
+          </Link>
+        </CustomGlowingButton>
       ) : (
         <></>
       )}
@@ -131,6 +122,24 @@ function page({ params }) {
           <u>Github repo</u>
         </Link>
         . Please check it out.
+      </div>
+    </div>
+  );
+}
+
+function CustomGlowingButton({ children }) {
+  return (
+    <div class="w-full flex items-center mt-5 mb-8 justify-center">
+      <div class="relative inline-flex group grow justify-center">
+        <div class="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#f0ad4e] to-orange-600 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+        <Card
+          variant="outline"
+          className="relative hover:dark:bg-site-gray dark:bg-site-gray flex gap-1 cursor-default w-full"
+        >
+          <CardHeader className="w-full flex items-center">
+            {children}
+          </CardHeader>
+        </Card>
       </div>
     </div>
   );
