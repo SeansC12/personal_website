@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export function AppImageCarousel({ images }) {
+export function AppImageCarousel({ images, name }) {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -43,11 +43,39 @@ export function AppImageCarousel({ images }) {
       >
         <CarouselContent>
           {images &&
-            images.map((image, index) => (
-              <CarouselItem key={index}>
-                <Image src={image} className="rounded-md" />
-              </CarouselItem>
-            ))}
+            images.map((image, index) => {
+              if (name === "Newsquest") {
+                return (
+                  <CarouselItem
+                    key={index}
+                    className="w-full flex justify-center"
+                  >
+                    <Image
+                      src={image}
+                      className="rounded-md max-h-96 w-full object-scale-down"
+                    />
+                  </CarouselItem>
+                );
+              } else {
+                return (
+                  <CarouselItem key={index}>
+                    <Image
+                      src={image}
+                      className="rounded-md"
+                    />
+                  </CarouselItem>
+                );
+              }
+              <CarouselItem
+                key={index}
+                className="w-full flex justify-center"
+              >
+                <Image
+                  src={image}
+                  className="rounded-md max-h-96 w-full object-scale-down"
+                />
+              </CarouselItem>;
+            })}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />

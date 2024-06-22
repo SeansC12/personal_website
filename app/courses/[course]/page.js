@@ -48,7 +48,7 @@ function page({ params }) {
       </Card>
       <div
         style={{ whiteSpace: "pre-wrap" }}
-        className="text-lg text-desc-gray mt-5"
+        className="text-lg text-[#DDDDDD] mt-5"
       >
         {course.description}
       </div>

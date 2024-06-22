@@ -92,7 +92,10 @@ function page({ params }) {
           </Link>
         </div>
       </div>
-      <AppImageCarousel images={project.appImages} />
+      <AppImageCarousel
+        images={project.appImages}
+        name={project.name}
+      />
       {project.name === "MentalStop" ? (
         <CustomGlowingButton>
           As seen on CNA:
@@ -105,7 +108,7 @@ function page({ params }) {
       )}
       <div
         style={{ whiteSpace: "pre-wrap" }}
-        className="text-lg text-desc-gray"
+        className="text-lg text-[#DDDDDD]"
       >
         {project.longDescription}
       </div>
