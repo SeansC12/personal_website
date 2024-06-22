@@ -51,7 +51,7 @@ export default function Home() {
         {/* <Image src={bmw} className="w-52" /> */}
         <div>
           <h1 className="mb-5 text-4xl md:text-5xl">
-            Hey, I'm Sean
+            Hey, I&apos;m Sean
           </h1>
           <SocialMediaPillWrapper>
             <SocialMediaPill

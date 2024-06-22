@@ -18,10 +18,10 @@ function page() {
           Me in SF for a school trip.
         </div>
         <div className="text-lg">
-          Hey, I'm Sean Chua. I have been developing and
-          deploying full-stack web applications for 2 years
-          now. I am passionate in web development and in
-          building robust software infrastructures. And I
+          Hey, I&apos;m Sean Chua. I have been developing
+          and deploying full-stack web applications for 2
+          years now. I am passionate in web development and
+          in building robust software infrastructures. And I
           freaking love cars 🚗.
         </div>
       </div>
