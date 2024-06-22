@@ -60,22 +60,24 @@ function ProjectCard({ project }) {
               </Button>
             </Link>
           </object>
-          <object>
-            <Link href={project.project_link}>
-              <Button
-                variant="outline"
-                className="dark:bg-site-gray dark:border-blue-500 dark:hover:bg-blue-500"
-              >
-                <Image
-                  src={web}
-                  width={15}
-                  height={15}
-                  className="mr-1"
-                />
-                Demo
-              </Button>
-            </Link>
-          </object>
+          {project.project_link && (
+            <object>
+              <Link href={project.project_link}>
+                <Button
+                  variant="outline"
+                  className="dark:bg-site-gray dark:border-blue-500 dark:hover:bg-blue-500"
+                >
+                  <Image
+                    src={web}
+                    width={15}
+                    height={15}
+                    className="mr-1"
+                  />
+                  Demo
+                </Button>
+              </Link>
+            </object>
+          )}
         </CardFooter>
       </Card>
     </Link>
