@@ -31,7 +31,18 @@ import courseCompletions from "@/lib/CourseCompletions";
 import CourseCard from "@/components/CourseCard";
 
 // Lucide-icons
-import { ExternalLink, ChevronRight } from "lucide-react";
+import {
+  ExternalLink,
+  ChevronRight,
+  AlertCircle,
+} from "lucide-react";
+
+// Shadcn
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert";
 
 import GlowingButton from "@/components/GlowingButton";
 
@@ -144,9 +155,18 @@ export default function Home() {
         </div>
       </Link>
       <iframe
-        className="w-full h-[800px]"
+        className="hidden md:block w-full h-[800px]"
         src="https://docs.google.com/document/d/e/2PACX-1vQwRs11myfUDPg_lllHUkShFw7e56I95tnaZgn1omTGdd7uH1V1ZcqJwIbsOwd7u5VvHX_21VXTeMMc/pub?embedded=true"
       />
+      <Alert
+        variant="outline"
+        className="block md:hidden dark:border-red-500 dark:text-red-500"
+      >
+        <AlertCircle className="h-4 w-4 dark:stroke-red-500" />
+        <AlertTitle className="dark:text-red-500 mb-0">
+          Resume PDF embed only available on desktop
+        </AlertTitle>
+      </Alert>
 
       {/* <ProjectModal
         open={isProjectOpen}

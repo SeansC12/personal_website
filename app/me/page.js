@@ -7,9 +7,11 @@ import Link from "next/link";
 function page() {
   return (
     <div className="text-lg">
-      <h1 className="mb-4">About Me</h1>
+      <h1 className="mb-4 text-3xl md:text-5xl">
+        About Me
+      </h1>
       <div className="w-full flex items-center justify-center"></div>
-      <div className="flex items-center justify-between gap-10 flex-row-reverse">
+      <div className="flex items-center justify-between gap-3 md:gap-10 flex-col md:flex-row-reverse">
         <div className="flex items-center justify-center flex-col text-xs">
           <Image
             src={me}
@@ -17,7 +19,7 @@ function page() {
           />
           Me in SF for a school trip.
         </div>
-        <div className="text-lg">
+        <div className="text-base md:text-lg text-center md:text-left">
           Hey, I&apos;m Sean Chua. I have been developing
           and deploying full-stack web applications for 2
           years now. I am passionate in web development and
@@ -25,9 +27,9 @@ function page() {
           freaking love cars 🚗.
         </div>
       </div>
-      <div className="flex items-center justify-between gap-1 mt-4">
+      <div className="flex items-center justify-between flex-col md:flex-row gap-3 md:gap-10 mt-10 md:mt-4">
         <div className="flex items-center justify-center flex-col">
-          <Image src={bmw} className="w-52" />
+          <Image src={bmw} className="w-52 min-w-52" />
           <div className="text-xs">
             My favourite (F80 M3).{" "}
             <Link
@@ -38,14 +40,12 @@ function page() {
             </Link>
           </div>
         </div>
-        <div>
+        <div className="text-base md:text-lg text-center md:text-left">
           I am fascinated by the complex infrastructures of
-          big software
-          <br /> companies and how they handle millions of
-          web traffic while <br /> staying resilient. I
-          learn by building full-stack apps that
-          <br /> strive to be as simple and resilient as
-          possible.
+          big software companies and how they handle
+          millions of web traffic whilestaying resilient. I
+          learn by building full-stack apps that strive to
+          be as simple and resilient as possible.
         </div>
         {/* I want to make an arrow that points to the below <Image>, something like a curved arrow coming from any direction with the text at the top saying "My favourite generation of my favourite car" */}
       </div>
@@ -78,7 +78,9 @@ function page() {
           </Link>
         </li>
       </ul>
-      <h2 className="mt-10 mb-5">Technologies I use</h2>
+      <h2 className="mt-10 mb-5 text-2xl md:text-4xl">
+        Technologies I use
+      </h2>
       <ul className="list-disc marker:text-[#666666] ml-5">
         <li className="mb-2">
           <Link
