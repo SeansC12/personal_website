@@ -44,7 +44,7 @@ function page({ params }) {
             />
           )}
           <h2>{project.name}</h2>
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="md:flex flex-wrap items-center justify-center gap-2 hidden">
             {project.stack &&
               project.stack.map((technology, index) => (
                 <div key={index}>
@@ -62,15 +62,15 @@ function page({ params }) {
             >
               <Button
                 variant="outline"
-                className="dark:bg-blue-600 dark:text-white dark:hover:bg-blue-500 text-lg h-max mr-3"
+                className="dark:bg-blue-600 dark:text-white dark:hover:bg-blue-500 text-lg h-max mr-3 rounded-full md:rounded-sm p-3 md:px-4 md:py-2"
               >
                 <Image
                   src={web}
                   width={25}
                   height={25}
-                  className="mr-2"
+                  className="mr-0 md:mr-2"
                 />
-                Open
+                <div className="hidden md:block">Open</div>
               </Button>
             </Link>
           )}
@@ -81,15 +81,15 @@ function page({ params }) {
           >
             <Button
               variant="outline"
-              className="dark:bg-site-gray text-lg h-max"
+              className="dark:bg-site-gray text-lg h-max rounded-full md:rounded-sm p-3 md:px-4 md:py-2"
             >
               <Image
                 src={github}
                 width={25}
                 height={25}
-                className="mr-2"
+                className="mr-0 md:mr-2"
               />
-              GitHub
+              <div className="hidden md:block">GitHub</div>
             </Button>
           </Link>
         </div>
@@ -101,7 +101,10 @@ function page({ params }) {
       {project.name === "MentalStop" ? (
         <CustomGlowingButton>
           As seen on CNA:
-          <Link className="link" href={project.awardLink}>
+          <Link
+            className="link break-all"
+            href={project.awardLink}
+          >
             {project.awardLink}
           </Link>
         </CustomGlowingButton>
@@ -134,9 +137,9 @@ function page({ params }) {
 
 function CustomGlowingButton({ children }) {
   return (
-    <div class="w-full flex items-center mt-5 mb-8 justify-center">
-      <div class="relative inline-flex group grow justify-center">
-        <div class="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#f0ad4e] to-orange-600 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+    <div className="w-full flex items-center mt-5 mb-8 justify-center">
+      <div className="relative inline-flex group grow justify-center">
+        <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#f0ad4e] to-orange-600 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
         <Card
           variant="outline"
           className="relative hover:dark:bg-site-gray dark:bg-site-gray flex gap-1 cursor-default w-full"

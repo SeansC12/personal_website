@@ -36,7 +36,7 @@ export function AppImageCarousel({ images, name }) {
     <>
       <Carousel
         plugins={[plugin.current]}
-        className="w-full"
+        className="w-full min-w-0"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
         setApi={setApi}
@@ -66,19 +66,23 @@ export function AppImageCarousel({ images, name }) {
                   </CarouselItem>
                 );
               }
-              <CarouselItem
-                key={index}
-                className="w-full flex justify-center"
-              >
-                <Image
-                  src={image}
-                  className="rounded-md max-h-96 w-full object-scale-down"
-                />
-              </CarouselItem>;
+              // <CarouselItem
+              //   key={index}
+              //   className="w-full flex justify-center"
+              // >
+              //   <Image
+              //     src={image}
+              //     className="rounded-md max-h-96 w-full object-scale-down"
+              //   />
+              // </CarouselItem>;
             })}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <div className="hidden lg:block">
+          <CarouselPrevious />
+        </div>
+        <div className="hidden lg:block">
+          <CarouselNext />
+        </div>
       </Carousel>
       <div className="py-2 text-center text-sm text-gray-500">
         Slide {current} of {count}
