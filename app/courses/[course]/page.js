@@ -24,11 +24,13 @@ function page({ params }) {
     params.course
   );
   return (
-    <div className="w-full lg:w-[800px]">
+    <div className="">
       <div className="flex justify-between mb-5">
-        <div className="flex items-center justify-center gap-3">
-          <h2>{course.name}</h2>
-        </div>
+        {/* <div className="flex items-center justify-center gap-3 text-lg md:text-4xl text-wrap"> */}
+        <h2 className="text-2xl md:text-4xl">
+          {course.name}
+        </h2>
+        {/* </div> */}
       </div>
       <Image
         src={course.imageOfCert}
@@ -37,15 +39,15 @@ function page({ params }) {
       <Card className="dark:bg-site-gray dark:border-white/10 w-full text-center mt-5">
         <CardHeader>
           <div className="flex items-center justify-center">
-            <div className="w-max link">
+            <div className="link text-wrap break-all">
               <Link href={course.cert_link}>
                 {course.cert_link}
               </Link>
-              {/* <div className="h-[2px] bg-link-purple -mt-1" /> */}
             </div>
           </div>
         </CardHeader>
       </Card>
+
       <div
         style={{ whiteSpace: "pre-wrap" }}
         className="text-lg text-[#DDDDDD] mt-5"
