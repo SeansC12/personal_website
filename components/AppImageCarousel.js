@@ -85,7 +85,10 @@ export function AppImageCarousel({ images, name }) {
         </div>
       </Carousel>
       <div className="py-2 text-center text-sm text-gray-500">
-        Slide {current} of {count}
+        Slide {current} of {count}{" "}
+        <div className="inline md:hidden">
+          (swipe on mobile)
+        </div>
       </div>
     </>
   );
