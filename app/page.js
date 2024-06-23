@@ -82,7 +82,7 @@ export default function Home() {
           <div className="text-lg text-[#DDDDDD] mb-5">
             I’m a web developer with a strong interest in
             React and building scalable and robust backend
-            systems. Welcome to my tech grove. 💻
+            systems. Welcome to my tech grove. 💻🌳
             {/* <br></br>
             <br></br>I am fascinated by the complex
             infrastructures of big software companies and
