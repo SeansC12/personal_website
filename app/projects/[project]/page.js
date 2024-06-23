@@ -39,7 +39,7 @@ function page({ params }) {
         <div className="flex items-center justify-center gap-3">
           {project.image && (
             <Image
-              className="w-full aspect-square max-w-16"
+              className="hidden sm:block w-full aspect-square max-w-16"
               src={project.image}
             />
           )}
