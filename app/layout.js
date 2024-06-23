@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
                 variant="outline"
               >
                 <ScrollText className="mr-2 h-5 w-5" />
-                Resume
+                CV
               </Button>
             </Link>
             <Link href="/me">

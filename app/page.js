@@ -150,7 +150,7 @@ export default function Home() {
         target="_blank"
       >
         <div className="w-max link mt-12 text-3xl font-bold  mb-6 cursor-pointer">
-          Resume
+          CV
           <ExternalLink className="ml-2 h-5 w-5 inline mb-1" />
         </div>
       </Link>
