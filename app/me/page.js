@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import bmw from "@/public/Drawing_of_BMW/F80.png";
-import me from "@/public/Selfie/SF.jpeg";
+import bmw from "@/public/Drawing_of_BMW/F80.webp";
+import me from "@/public/Selfie/SF.webp";
 import Link from "next/link";
 
 function page() {
