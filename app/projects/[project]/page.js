@@ -62,7 +62,7 @@ function page({ params }) {
             >
               <Button
                 variant="outline"
-                className="dark:bg-blue-600 dark:text-white dark:hover:bg-blue-500 text-lg h-max mr-3 rounded-full md:rounded-sm p-3 md:px-4 md:py-2"
+                className="dark:bg-blue-600 dark:text-white dark:hover:bg-blue-500 text-lg h-max mr-3 rounded-full md:rounded-md p-3 md:px-4 md:py-2"
               >
                 <Image
                   src={web}
@@ -81,7 +81,7 @@ function page({ params }) {
           >
             <Button
               variant="outline"
-              className="dark:bg-site-gray text-lg h-max rounded-full md:rounded-sm p-3 md:px-4 md:py-2"
+              className="dark:bg-site-gray text-lg h-max rounded-full md:rounded-md p-3 md:px-4 md:py-2"
             >
               <Image
                 src={github}
