@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 
-const test = "<u>Test</u>";
-
 function index({ project }) {
   return (
     <div>
@@ -16,19 +14,37 @@ function index({ project }) {
         text={project.longDescription2}
       />
 
+      <div className="mb-6">
+        <span className="font-bold">
+          <Link
+            href="https://hub.docker.com/repository/docker/seanc12/pill-counting-py-server/general"
+            className="link"
+          >
+            Flask Server Image
+          </Link>{" "}
+          |{" "}
+          <Link
+            href="https://hub.docker.com/repository/docker/seanc12/pill-counting-web"
+            className="link"
+          >
+            React Image
+          </Link>
+        </span>
+      </div>
+
       <EachTextSection
         title="YOLOv8 model"
-        text={project.longDescription2}
+        text={project.longDescription3}
       />
 
       <EachTextSection
-        title="Docker"
-        text={project.longDescription2}
+        title="NVIDIA Jetson"
+        text={project.longDescription4}
       />
 
       <EachTextSection
         title="Why was it built?"
-        text={project.longDescription2}
+        text={project.longDescription5}
       />
 
       <div
