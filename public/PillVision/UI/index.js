@@ -1,27 +1,30 @@
 import React from "react";
 import Link from "next/link";
 
+const test = "<u>Test</u>";
+
 function index({ project }) {
   return (
     <div>
+      <div className="font-bold font-mono text-flair text-xl mb-2">
+        Overall software architecture
+      </div>
+      <div
+        style={{ whiteSpace: "pre-wrap" }}
+        className="text-lg text-[#DDDDDD] mb-6"
+      >
+        {project.longDescription1}
+      </div>
       <div className="font-bold font-mono text-flair text-xl mb-2">
         Why was it built?
       </div>
       <div
         style={{ whiteSpace: "pre-wrap" }}
         className="text-lg text-[#DDDDDD]"
-      >
-        {project.longDescription1}
-      </div>
-      <div className="font-bold font-mono text-flair text-xl mt-3 mb-2">
-        Techy stuff
-      </div>
-      <div
-        style={{ whiteSpace: "pre-wrap" }}
-        className="text-lg text-[#DDDDDD]"
-      >
-        {project.longDescription2}
-      </div>
+        dangerouslySetInnerHTML={{
+          __html: project.longDescription2,
+        }}
+      />
       <div
         style={{ whiteSpace: "pre-wrap" }}
         className="font-mono text-flair"
