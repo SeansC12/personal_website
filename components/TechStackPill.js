@@ -6,11 +6,12 @@ const techStackColours = {
   mysql: ["#01758f", "#fff", "#f29111"],
   firebase: ["#ffc303", "#000"],
   supabase: ["#3dcf8e", "#000"],
-  vite: ["#bd34fe", "#fff"],
+  react: ["#61dafa", "#000"],
   flask: ["#42adbf", "#000"],
   opencv: ["#ff7074", "#000"],
   cra: ["#03d3ac", "#000"],
   "three.js": ["#000", "#fff"],
+  yolov8: ["#000", "#fff"],
 };
 
 function TechStackPill({ text }) {
