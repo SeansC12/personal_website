@@ -6,6 +6,8 @@ import FlashingJetson from "@/public/PillVision/DescriptionImages/Flashing_Jetso
 import BrokenOS from "@/public/PillVision/DescriptionImages/Broken_OS.jpeg";
 import Jetson from "@/public/PillVision/DescriptionImages/Jetson.jpeg";
 
+import Team from "@/public/PillVision/Misc/Team.jpeg";
+
 function index({ project }) {
   return (
     <div>
@@ -43,18 +45,24 @@ function index({ project }) {
       >
         <div className="grid md:grid-cols-2 grid-cols-1 gap-3 mb-3">
           <div>
-            <Image src={Jetson} />
+            <Image className="rounded-md" src={Jetson} />
             <div className="text-center text-sm text-gray-400 mt-2">
               The Jetson Nano 4GB.
             </div>
-            <Image src={BrokenOS} />
+            <Image
+              className="mt-2 rounded-md"
+              src={BrokenOS}
+            />
             <div className="text-center text-sm text-gray-400 mt-2">
               Jetson could not boot up due to broken SD card
               reader with OS inside.
             </div>
           </div>
           <div>
-            <Image src={FlashingJetson} />
+            <Image
+              className="rounded-md"
+              src={FlashingJetson}
+            />
             <div className="text-center text-sm text-gray-400 mt-2">
               Flashing the NVIDIA Jetson using SDK Manager
               on an Ubuntu x86 laptop.
@@ -68,10 +76,28 @@ function index({ project }) {
         text={project.longDescription4}
       />
 
+      <div className="mb-6 link">
+        <Link
+          href={
+            "https://universe.roboflow.com/kkh7/trgoh/model/1"
+          }
+          className="font-bold"
+        >
+          The deployed model on Roboflow.
+        </Link>
+      </div>
+
       <EachTextSection
         title="Why was it built?"
         text={project.longDescription5}
-      />
+      >
+        <Image className="rounded-md" src={Team} />
+        <div className="text-center text-sm text-gray-400 mt-2 mb-4">
+          Our KKH mentor on the far left, Mr Alan Chui. I am
+          third from the left. Taken at our school's project
+          showcase day.
+        </div>
+      </EachTextSection>
 
       <div
         style={{ whiteSpace: "pre-wrap" }}
