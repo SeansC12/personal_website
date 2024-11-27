@@ -1,16 +1,30 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import GlowingCard from "@/components/GlowingCard";
 
 import FlashingJetson from "@/public/PillVision/DescriptionImages/Flashing_Jetson.jpeg";
 import BrokenOS from "@/public/PillVision/DescriptionImages/Broken_OS.jpeg";
 import Jetson from "@/public/PillVision/DescriptionImages/Jetson.jpeg";
 
 import Team from "@/public/PillVision/Misc/Team.jpeg";
+import Award from "@/public/PillVision/Misc/Award.jpeg";
 
 function index({ project }) {
   return (
     <div>
+      <GlowingCard>
+        <span className="mb-6">
+          The product, including the PillVision software,
+          was awarded the{" "}
+          <b className="text-yellow-600">
+            Design Excellence Award
+          </b>{" "}
+          in the 2024 SST-NP IDP Capstone Project Showcase
+          Day.
+        </span>
+        <Image className="rounded-md" src={Award} />
+      </GlowingCard>
       <EachTextSection
         title="Overall software architecture"
         text={project.longDescription1}

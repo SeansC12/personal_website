@@ -1,6 +1,6 @@
 import { Card, CardHeader } from "@/components/ui/card";
 
-function CustomGlowingCard({ children }) {
+function GlowingCard({ children }) {
   return (
     <div className="w-full flex items-center mt-5 mb-8 justify-center">
       <div className="relative inline-flex group grow justify-center">
@@ -18,4 +18,4 @@ function CustomGlowingCard({ children }) {
   );
 }
 
-export default CustomGlowingCard;
+export default GlowingCard;
