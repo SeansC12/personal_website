@@ -15,7 +15,7 @@ function page() {
         <div className="flex items-center justify-center flex-col text-xs">
           <Image
             src={me}
-            className="aspect-square rounded-md overflow-hidden w-40 min-w-40 mb-4"
+            className="aspect-square rounded-md overflow-hidden w-40 min-w-40 mb-4 text-gray-400"
           />
           Me in SF for a school trip.
         </div>
@@ -30,7 +30,7 @@ function page() {
       <div className="flex items-center justify-between flex-col md:flex-row gap-3 md:gap-10 mt-10 md:mt-4">
         <div className="flex items-center justify-center flex-col">
           <Image src={bmw} className="w-52 min-w-52" />
-          <div className="text-xs">
+          <div className="text-xs text-gray-400">
             My favourite (F80 M3).{" "}
             <Link
               className="link"
