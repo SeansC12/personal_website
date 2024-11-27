@@ -33,12 +33,12 @@ function index({ project }) {
       </div>
 
       <EachTextSection
-        title="YOLOv8 model"
+        title="NVIDIA Jetson"
         text={project.longDescription3}
       />
 
       <EachTextSection
-        title="NVIDIA Jetson"
+        title="YOLOv8 model"
         text={project.longDescription4}
       />
 
