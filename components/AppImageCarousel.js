@@ -29,7 +29,7 @@ export function AppImageCarousel({ images, name }) {
   }, [api]);
 
   const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 5000, stopOnInteraction: true })
   );
 
   return (
@@ -44,28 +44,41 @@ export function AppImageCarousel({ images, name }) {
         <CarouselContent>
           {images &&
             images.map((image, index) => {
-              if (name === "Newsquest") {
+              if (image.video) {
                 return (
-                  <CarouselItem
-                    key={index}
-                    className="w-full flex justify-center"
-                  >
-                    <Image
-                      src={image}
-                      className="rounded-md max-h-96 w-full object-scale-down"
+                  <CarouselItem key={index}>
+                    <iframe
+                      src={image.src}
+                      allow="autoplay"
+                      className={`rounded-md w-full aspect-video`}
                     />
                   </CarouselItem>
                 );
               } else {
-                return (
-                  <CarouselItem key={index}>
-                    <Image
-                      src={image}
-                      className="rounded-md"
-                    />
-                  </CarouselItem>
-                );
+                if (name === "Newsquest") {
+                  return (
+                    <CarouselItem
+                      key={index}
+                      className="w-full flex justify-center"
+                    >
+                      <Image
+                        src={image}
+                        className="rounded-md max-h-96 w-full object-scale-down"
+                      />
+                    </CarouselItem>
+                  );
+                } else {
+                  return (
+                    <CarouselItem key={index}>
+                      <Image
+                        src={image}
+                        className="rounded-md"
+                      />
+                    </CarouselItem>
+                  );
+                }
               }
+
               // <CarouselItem
               //   key={index}
               //   className="w-full flex justify-center"
