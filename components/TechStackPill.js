@@ -12,6 +12,7 @@ const techStackColours = {
   cra: ["#03d3ac", "#000"],
   "three.js": ["#000", "#fff"],
   yolov8: ["#000", "#fff"],
+  docker: ["#0a93e6", "fff"],
 };
 
 function TechStackPill({ text }) {
