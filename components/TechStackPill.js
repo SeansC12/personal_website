@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 const techStackColours = {
   "next.js": ["#fff", "#000"],
+  expressjs: ["#fff", "#000"],
   mysql: ["#01758f", "#fff", "#f29111"],
   firebase: ["#ffc303", "#000"],
   supabase: ["#3dcf8e", "#000"],
@@ -13,6 +14,8 @@ const techStackColours = {
   "three.js": ["#000", "#fff"],
   yolov8: ["#000", "#fff"],
   docker: ["#0a93e6", "fff"],
+  redis: ["#d93632", "#fff"],
+  htmx: ["#5071ff", "#000"],
 };
 
 function TechStackPill({ text }) {
