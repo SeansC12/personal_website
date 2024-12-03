@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </Link>
       <iframe
-        className="hidden md:block w-full h-[800px]"
+        className="hidden md:block w-full h-[1200px]"
         src="https://docs.google.com/document/d/e/2PACX-1vSxqy0XHNnXEShc6dt7msh4VkGvXZ5JBXSbz-po8UeB22ObA7EhaubKYE0-f1Ly2w/pub?embedded=true"
       ></iframe>
       <Alert
