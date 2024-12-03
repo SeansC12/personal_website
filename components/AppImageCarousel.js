@@ -63,6 +63,7 @@ export function AppImageCarousel({ images, name }) {
                     >
                       <Image
                         src={image}
+                        quality={100}
                         className="rounded-md max-h-96 w-full object-scale-down"
                       />
                     </CarouselItem>
