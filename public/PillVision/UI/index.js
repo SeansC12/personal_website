@@ -90,12 +90,12 @@ function index({ project }) {
         text={project.longDescription4}
       />
 
-      <div className="mb-6 link">
+      <div className="mb-6">
         <Link
           href={
             "https://universe.roboflow.com/kkh7/trgoh/model/1"
           }
-          className="font-bold"
+          className="font-bold link"
         >
           The deployed model on Roboflow.
         </Link>
@@ -108,8 +108,8 @@ function index({ project }) {
         <Image className="rounded-md" src={Team} />
         <div className="text-center text-sm text-gray-400 mt-2 mb-4">
           Our KKH mentor on the far left, Mr Alan Chui. I am
-          third from the left. Taken at our school's project
-          showcase day.
+          third from the left. Taken at our school&apos;s
+          project showcase day.
         </div>
       </EachTextSection>
 
