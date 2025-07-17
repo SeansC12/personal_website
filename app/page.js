@@ -145,7 +145,7 @@ export default function Home() {
       </div> */}
       <Link
         id="more"
-        href="https://docs.google.com/document/d/19jmV3xbSryLo1njBEuT-3Mo0GfqPSHYR/edit?usp=sharing&ouid=108506832616222370624&rtpof=true&sd=true"
+        href="https://docs.google.com/document/d/e/2PACX-1vTIOJdqnD1l4YPI0lcU5ue_OCs-A40wa0I7s2Jhr1ybYEHFs-daE3B_oJq6OkSiyQ/pub"
         rel="noopener noreferrer"
         target="_blank"
       >
