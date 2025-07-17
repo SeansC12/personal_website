@@ -15,7 +15,7 @@ import {
 } from "@/components/SocialMediaPill";
 
 // Pictures of me
-import me from "@/public/Selfie/Me.jpg";
+import me from "@/public/Selfie/Me2.jpeg";
 
 // Project Card
 import ProjectCard from "@/components/ProjectCard";
@@ -80,7 +80,7 @@ export default function Home() {
           </SocialMediaPillWrapper>
 
           <div className="text-lg text-[#DDDDDD] mb-5">
-            I’m a web developer with a strong interest in
+            I’m currently a web developer intern at Alpha Story with a strong interest in
             React and building scalable and robust backend
             systems. Welcome to my tech grove. 💻🌳
             {/* <br></br>
